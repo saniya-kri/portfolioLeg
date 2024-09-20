@@ -1,0 +1,295 @@
+
+
+/* button */
+.btn2 {
+        padding: 12px 32px;
+        border: none;
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 12px;
+        /* background-color: white; */
+      }
+      .btn2::after {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #1c1f2b;
+        /* background-color: #ffff; */
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+      }
+      /* glow */
+      .btn2::before {
+        content: "";
+        background: linear-gradient(
+          45deg,
+          #FF0000, #FF7300, #FFFB00, #48FF00,
+          #00FFD5, #002BFF, #FF00C8, #FF0000
+        );
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 600%;
+        z-index: -1;
+        width: calc(100% + 4px);
+        height:  calc(100% + 4px);
+        filter: blur(8px);
+        animation: glowing 20s linear infinite;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+        opacity: 0;
+      }
+      
+      @keyframes glowing {
+        0% {background-position: 0 0;}
+        50% {background-position: 400% 0;}
+        100% {background-position: 0 0;}
+      }
+      
+      /* hover */
+      .btn2:hover::before {
+        opacity: 1;
+      }
+      
+      .btn2:active:after {
+        background: transparent;
+      }
+      
+      .btn2:active {
+        color: #000;
+      }
+
+
+      
+     
+
+
+/* hover img */
+
+
+.img-area img:hover{
+  opacity: 0;
+  cursor: pointer;
+} 
+
+.image_one {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  /* transition: all; */
+}
+
+
+.image_two {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  opacity: 1;
+  transition-duration: 1.2s;
+}
+.image_two img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.animated-develop {
+        filter: contrast(1.2);
+        background-image: linear-gradient(90deg, #007cf0, #00dfd8);
+        position: relative;
+        animation: animationFade-develop 8s ease infinite normal none running;
+        animation-delay: 0s;
+        z-index: 1;
+    }
+
+.animated-develop, .develop:before {
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-left: .05em;
+        padding-right: .05em;
+}
+
+.animated-develop:after, .develop-shadow {
+        padding-left: .05em;
+        padding-right: .05em;
+        background-image: linear-gradient(90deg, #007cf0, #00dfd8);
+        position: relative;
+        animation: animationFade-develop 8s ease infinite normal none running;
+        animation-delay: 0s;
+    }
+    .develop-shadow {
+        position: absolute;
+        bottom: 50px;
+        filter: blur(50px);
+        height: 20px;
+        width: 100%;
+        z-index: 0;
+    }
+
+    .preview {
+        position: relative;
+        display: block;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        padding-left: .05em;
+        padding-right: .05em;
+    }
+
+    *, :after, :before {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgba(59, 130, 246, .5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+    }
+
+    .animated-preview, .preview-shadow {
+        background-image: linear-gradient(90deg, #7928ca, #ff0080);
+        animation: animationFade-preview 8s ease infinite normal none running;
+        animation-delay: 0s;
+    }
+    .animated-preview {
+        filter: contrast(1.2);
+        position: relative;
+        z-index: 1;
+    }
+    .animated-preview, .preview:before {
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-left: .05em;
+        padding-right: .05em;
+    }
+    .preview-shadow, .ship {
+        padding-left: .05em;
+        padding-right: .05em;
+        position: relative;
+    }
+    .preview-shadow {
+        position: absolute;
+        bottom: 50px;
+        filter: blur(50px);
+        height: 20px;
+        width: 100%;
+        z-index: 0;
+    }
+
+    .preview-shadow {
+        background-image: linear-gradient(90deg, #7928ca, #ff0080);
+        animation: animationFade-preview 8s ease infinite normal none running;
+        animation-delay: 0s;
+    }
+    .animated-ship, .ship-shadow {
+        background-image: linear-gradient(90deg, #ff4d4d, #f9cb28);
+        animation: animationFade-ship 8s ease infinite normal none running;
+        animation-delay: 0s;
+    }
+    .animated-ship {
+        filter: contrast(1.2);
+        position: relative;
+        z-index: 1;
+    }
+    .animated-ship, .ship:before {
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-left: .05em;
+        padding-right: .05em;
+    }
+    .ship-shadow {
+        position: absolute;
+        bottom: 50px;
+        filter: blur(50px);
+        height: 20px;
+        width: 100%;
+        padding-left: .05em;
+        padding-right: .05em;
+        position: relative;
+        z-index: 0;
+    }
+    .ship-shadow {
+        background-image: linear-gradient(90deg, #ff4d4d, #f9cb28);
+        animation: animationFade-ship 8s ease infinite normal none running;
+        animation-delay: 0s;
+    }
+
+    .ship {
+        display: block;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+    .preview-shadow, .ship {
+        padding-left: .05em;
+        padding-right: .05em;
+        position: relative;
+    }
+
